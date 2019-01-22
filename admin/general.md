@@ -1,6 +1,6 @@
-## General Configuration
+## Общая конфигурация
 
-You could customize Admin with `AdminConfig` struct when initializing it, here are some general configurations:
+Вы можете настроить Admin с `AdminConfig` структурой при инициализации, используя следующие параметры:
 
 ```go
 type AdminConfig struct {
@@ -16,25 +16,25 @@ type AdminConfig struct {
 
 * <a id="sitename"></a>SiteName
 
-  By Default, Site Name is `Qor Admin`, you can use `SiteName` to change site's title.
+  По умолчанию, для Site Name установлено значение `Qor Admin`, вы можете использовать `SiteName` для изменения названия сайта.
 
   ```go
   Admin := admin.New(&admin.AdminConfig{SiteName: "Qor Example"})
   ```
 
-  hint: [You can inject stylesheets, javascripts into your admin site with your site's title](/admin/theming_and_customization.md#global-stylesheet--javascript)
+  Совет: [You can inject stylesheets, javascripts into your admin site with your site's title](/admin/theming_and_customization.md#global-stylesheet--javascript)
 
 * DB
 
-  `DB` is a GORM DB connection, it is required, QOR Admin will use the DB to manage data.
+  `DB` is a GORM DB connection, требуестся для определения соединения с БД
 
 * Auth
 
-  Auth is used for [Authentication](/admin/authentication.md)
+  Auth используется для [Authentication](/admin/authentication.md)
 
 * SessionManager
 
-  Admin use SessionManager to handle cookies, flash messages, learn to [customize it](/admin/session_manager.md)
+  Admin использует SessionManager для управления cookies, flash messages, learn to [customize it](/admin/session_manager.md)
 
 * I18n
 
@@ -50,9 +50,9 @@ type AdminConfig struct {
 
 ## Dashboard
 
-QOR Admin provides a default dashboard page with some dummy text. If you want to customize the dashboard, you can create a file `dashboard.tmpl` in [QOR view paths](/admin/theming_and_customization.md#view-paths), QOR Admin will load it as Golang templates when rendering the dashboard page.
+QOR Admin по умолчанию предоставляет страницу панели инструментов  с фиктивным текстом.. Если вы хотите настроить панель, вы можете создать файл `dashboard.tmpl` в [QOR view paths](/admin/theming_and_customization.md#view-paths), QOR Admin загрузит его как шаблоны Golang при отображении страницы панели инструментов.
 
-If you want to disable the dashboard, you can redirect it to some other page, for example:
+Если вы хотите отключить dashboard, вы можете перенаправить ее на другую страницу, например:
 
 ```go
 Admin.GetRouter().Get("/", func(c *admin.Context) {

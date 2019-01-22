@@ -46,8 +46,7 @@ type AdminConfig struct {
 
 * Transformer
 
-  Используется для создания 
-  [ Используется для создания RESTFul API](/admin/restful_api.md#transformer)
+  [Используется для создания RESTFul API](/admin/restful_api.md#transformer)
 
 ## Dashboard
 

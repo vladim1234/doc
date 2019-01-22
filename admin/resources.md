@@ -1,9 +1,10 @@
 # Resources
 
-Resources are something that can be administered through the QOR Admin's user interface, often a GORM backend model.
+Ресурсы - это то, что можно администрировать через пользовательский интерфейс QOR Admin, часто это модель GORM (таблица БД).
 
-## Add a resource to QOR Admin
+## добавление ресурса в QOR Admin
 
+Например, имеем модель, по которой создана таблица в БД:
 ```go
 // GORM-backend model
 type User struct {
@@ -15,20 +16,22 @@ type User struct {
   Role      string
   Addresses []Address
 }
+```
+Добавляем ее в интерфейс Qor Admin:
 
-// Add it to Admin
+```go
 user := Admin.AddResource(&User{}, &admin.Config{Menu: []string{"User Management"}})
 ```
 
 ## Resource Configuration
 
-Available options when customize a Resource inside `admin.Config` are:
+Для настройки ресурса доступные опции в `admin.Config`:
 
 | Name       | Type              | Default | Description                                                                                         |
 | ---        | ---               | ---     | ---                                                                                                 |
-| Name       | string            |         | Display name of the resource                                                                        |
-| Menu       | []string          |         | Menu setting of the resource, check [Menus](/admin/theming_and_customization.md#menus) for detail |
-| Permission | *roles.Permission |         | Control the authority of the resource, check [Roles](/admin/authentication.md#authorization-for-resource) for detail         |
+| Name       | string            |         | Отображаемое имя ресурса                                                                        |
+| Menu       | []string          |         | Настройка меню для ресурса, см. [Menus](/admin/theming_and_customization.md#menus) |
+| Permission | *roles.Permission |         | Управление доступом для ресурса, см. [Roles](/admin/authentication.md#authorization-for-resource)  |
 | Themes     | []ThemeInterface  |         | Set [customized theme](/admin/theming_and_customization.md#themes) for the resource               |
 | Priority   | int               |         | Control the display sequence in menu, ordered by ASC                                                |
 | Singleton  | bool              | false   | Set the resource is a single object or multiple objects. e.g. "SEO setting" vs "Users"              |

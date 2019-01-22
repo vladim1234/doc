@@ -22,7 +22,7 @@ type AdminConfig struct {
   Admin := admin.New(&admin.AdminConfig{SiteName: "Qor Example"})
   ```
 
-  Совет: [You can inject stylesheets, javascripts into your admin site with your site's title](/admin/theming_and_customization.md#global-stylesheet--javascript)
+  Совет: [Вы можете внедрить stylesheets, javascripts на ваш сайт](/admin/theming_and_customization.md#global-stylesheet--javascript)
 
 * DB
 
@@ -46,7 +46,8 @@ type AdminConfig struct {
 
 * Transformer
 
-  [Transformer for RESTFul API](/admin/restful_api.md#transformer)
+  Используется для создания 
+  [ Используется для создания RESTFul API](/admin/restful_api.md#transformer)
 
 ## Dashboard
 

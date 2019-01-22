@@ -1,26 +1,38 @@
 # Fields
 
-## Customize visible fields
+## Настройка видимых полей
 
-By default all fields are visible if you specifically declare fields, only defined fields will be visible and they will be presented in the order defined:
+По умолчанию Qor отображает все поля. Если вы специально объявите поля, будут видны только определенные поля, и они будут представлены в указанном порядке:
 
 ```go
 // Add resources `Order`, `Product` to Admin:
 order := Admin.AddResource(&models.Order{})
 product := Admin.AddResource(&models.Product{})
+```
+Показать перечисленные атрибуты:
 
-// show given attributes
+```go
 order.IndexAttrs("User", "PaymentAmount", "ShippedAt", "CancelledAt", "State", "ShippingAddress")
+```
+показать все атрибуты, кроме `State`
 
+```go
 // show all attributes except `State`
 order.IndexAttrs("-State")
+```
+Показать перечисленные атрибуты на новой странице:
 
+```go
 // Set attributes will be shown in the new page
 order.NewAttrs("User", "PaymentAmount", "ShippedAt", "CancelledAt", "State", "ShippingAddress")
+```
+показать все атрибуты, кроме `State` на новой странице:
 
-// show all attributes except `State`
+```go
 order.NewAttrs("-State")
+```
 
+```go
 // Structure the new form to make it tidy and clean with `Section`
 product.NewAttrs(
   &admin.Section{
@@ -39,10 +51,13 @@ product.NewAttrs(
   "Description",
   "ColorVariations",
 }
+```
 
+```go
 // Set attributes will be shown for the edit page, similar to new page
 order.EditAttrs("User", "PaymentAmount", "ShippedAt", "CancelledAt", "State", "ShippingAddress")
-
+```
+```go
 // Set attributes will be shown for the show page, similar to new page
 // If ShowAttrs haven't been configured, there will be no show page generated, by will show the edit form instead
 order.ShowAttrs("User", "PaymentAmount", "ShippedAt", "CancelledAt", "State", "ShippingAddress")

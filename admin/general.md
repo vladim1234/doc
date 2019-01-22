@@ -42,7 +42,7 @@ type AdminConfig struct {
 
 * <a id="assetfs"></a>AssetFS
 
-  AssetFS defined how to look up templates when rendering pages, refer [View Paths]((/admin/theming_and_customization.md#view-paths) for more detail, when deploy your site to production, you usually want your application to be standalone executable, check out [Deploy to production](/admin/deploy.md) for how to.
+  AssetFS defined how to look up templates when rendering pages, refer  [View Paths]((/admin/theming_and_customization.md#view-paths) for more detail, when deploy your site to production, you usually want your application to be standalone executable, check out [Deploy to production](/admin/deploy.md) for how to.
 
 * Transformer
 

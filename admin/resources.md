@@ -34,6 +34,6 @@ user := Admin.AddResource(&User{}, &admin.Config{Menu: []string{"User Management
 | Permission | *roles.Permission |         | Управление доступом для ресурса, см. [Roles](/admin/authentication.md#authorization-for-resource)  |
 | Themes     | []ThemeInterface  |         | Установка индивидуальную тему для ресурса [индивидуальной темы](/admin/theming_and_customization.md#themes) для ресурса              |
 | Priority   | int               |         | Определяет порядок сортировки записей в меню, производиться как по возрастанию (ASK)                                                |
-| Singleton  | bool              | false   |Задать ресурс - это один объект или несколько объектов. e.g. "SEO setting" vs "Users"              |
+| Singleton  | bool              | false   |Задать ресурс - это один объект или несколько объектов. e.g. "SEO setting" vs "Users". При установке в true вместо таблицы будет отображаться поле для редактирования записи.           |
 | Invisible  | bool              | false   | Установливает, отображается ли ресурс в меню                                                         |
 | PageCount  | int               | 20      | Определяет, сколько записей будет отображаться на странице                                   |

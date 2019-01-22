@@ -47,12 +47,10 @@ product.NewAttrs(
 ```
 Показать перечисленные атрибуты на странице редактирования:
 ```go
-// Set attributes will be shown for the edit page, similar to new page
 order.EditAttrs("User", "PaymentAmount", "ShippedAt", "CancelledAt", "State", "ShippingAddress")
 ```
 Показать перечисленные атрибуты на странице отображения:
 ```go
-// If ShowAttrs haven't been configured, there will be no show page generated, by will show the edit form instead
 order.ShowAttrs("User", "PaymentAmount", "ShippedAt", "CancelledAt", "State", "ShippingAddress")
 ```
 Если ShowAttrs не были настроены, страница показа не будет сгенерирована, вместо нее будет показана форма редактирования.

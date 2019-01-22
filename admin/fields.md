@@ -3,31 +3,24 @@
 ## Настройка видимых полей
 
 По умолчанию Qor отображает все поля. Если вы специально объявите поля, будут видны только определенные поля, и они будут представлены в указанном порядке:
-
 ```go
 // Add resources `Order`, `Product` to Admin:
 order := Admin.AddResource(&models.Order{})
 product := Admin.AddResource(&models.Product{})
 ```
 Показать перечисленные атрибуты:
-
 ```go
 order.IndexAttrs("User", "PaymentAmount", "ShippedAt", "CancelledAt", "State", "ShippingAddress")
 ```
 показать все атрибуты, кроме `State`
-
 ```go
-// show all attributes except `State`
 order.IndexAttrs("-State")
 ```
 Показать перечисленные атрибуты на новой странице:
-
 ```go
-// Set attributes will be shown in the new page
 order.NewAttrs("User", "PaymentAmount", "ShippedAt", "CancelledAt", "State", "ShippingAddress")
 ```
 показать все атрибуты, кроме `State` на новой странице:
-
 ```go
 order.NewAttrs("-State")
 ```

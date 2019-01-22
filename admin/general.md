@@ -42,7 +42,7 @@ type AdminConfig struct {
 
 * <a id="assetfs"></a>AssetFS
 
-  AssetFS определяет, как искать шаблоны при рендеринге страниц, см. [view paths]((/admin/theming_and_customization.md) для более подробной информации, при развертывании вашего сайта в производство, вы можете сделать ваше приложение автономно исполняемым, см. [Deploy to production](/admin/deploy.md).
+  AssetFS определяет, как искать шаблоны при рендеринге страниц, см. [view paths](/admin/theming_and_customization.md) для более подробной информации, при развертывании вашего сайта  вы можете сделать ваше приложение автономно исполняемым, см. [Deploy to production](/admin/deploy.md).
 
 * Transformer
 

@@ -32,8 +32,8 @@ user := Admin.AddResource(&User{}, &admin.Config{Menu: []string{"User Management
 | Name       | string            |         | Отображаемое имя ресурса                                                                        |
 | Menu       | []string          |         | Настройка меню для ресурса, см. [Menus](/admin/theming_and_customization.md#menus) |
 | Permission | *roles.Permission |         | Управление доступом для ресурса, см. [Roles](/admin/authentication.md#authorization-for-resource)  |
-| Themes     | []ThemeInterface  |         | Set [customized theme](/admin/theming_and_customization.md#themes) for the resource               |
-| Priority   | int               |         | Control the display sequence in menu, ordered by ASC                                                |
-| Singleton  | bool              | false   | Set the resource is a single object or multiple objects. e.g. "SEO setting" vs "Users"              |
-| Invisible  | bool              | false   | Set whether the resource is visible in menu                                                         |
-| PageCount  | int               | 20      | Pagination setting, Set how many records shall be shown per page                                    |
+| Themes     | []ThemeInterface  |         | Установка индивидуальную тему для ресурса [индивидуальной темы](/admin/theming_and_customization.md#themes) для ресурса              |
+| Priority   | int               |         | Определяет порядок сортировки записей в меню, производиться как по возрастанию (ASK)                                                |
+| Singleton  | bool              | false   |Задать ресурс - это один объект или несколько объектов. e.g. "SEO setting" vs "Users"              |
+| Invisible  | bool              | false   | Установливает, отображается ли ресурс в меню                                                         |
+| PageCount  | int               | 20      | Определяет, сколько записей будет отображаться на странице                                   |

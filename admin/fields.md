@@ -157,7 +157,7 @@ type Meta struct {
 
 * Resource
 
-  This could be used to customize attributes in nested form, usually, this is no need to set, check [How to customize attribute in nested form](../metas/collection-edit.md) for detail.
+  Это может быть использовано для настройки атрибутов во вложенной форме, обычно это не нужно устанавливать, проверьте подробнее, [как настроить атрибут во вложенной форме](../metas/collection-edit.md).
 
 * Permission
 

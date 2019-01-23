@@ -1,8 +1,9 @@
-# Integrate with WEB frameworks
+# Интеграция с WEB frameworks
 
-QOR Admin should be able to integrate with most golang web frameworks (let me know if there are any web framework not supported), here are some examples of how to integrate with them.
+Администратор QOR имеет возможность интеграции с большинством веб-фреймворков golang. 
+Несколько примеров того, как их интегрировать.
 
-## Integrate with HTTP ServeMux
+##  Интеграция с HTTP ServeMux
 
 ```go
 mux := http.NewServeMux()
@@ -10,7 +11,7 @@ Admin.MountTo("/admin", mux)
 http.ListenAndServe(":9000", mux)
 ```
 
-## Integrate with Beego
+##  Интеграция с Beego
 
 ```go
 mux := http.NewServeMux()
@@ -20,7 +21,7 @@ beego.Handler("/admin/*", mux)
 beego.Run()
 ```
 
-## Integrate with Gin
+##  Интеграция с Gin
 
 ```go
 mux := http.NewServeMux()
@@ -31,7 +32,7 @@ r.Any("/admin/*resources", gin.WrapH(mux))
 r.Run()
 ```
 
-## Integrate with gorilla/mux
+##  Интеграция с gorilla/mux
 
 ```go
 adminMux := http.NewServeMux()

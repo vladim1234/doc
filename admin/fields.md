@@ -69,19 +69,19 @@ orderItemResource.EditAttrs("ProductCode", "Price", "Quantity")
 
 По умолчанию поля ресурса отображаются на основе его типов и отношений. при необходимости  вы можете настроить рендеринг, переписав meta определение.
 
-Существует несколько предопределенных типов `Meta`, в том числе `string`, `password`, `date`, `datetime`, `rich_editor`, `select_one`, `select_many`, более подробно ([see full list below](#predefined-meta-types)).
+Существует несколько предопределенных типов `Meta`, в том числе `string`, `password`, `date`, `datetime`, `rich_editor`, `select_one`, `select_many`, ([более полный список](#common_meta_types)).
 
-[QOR Admin](../admin/README.md) will auto select a type for `Meta` based on a field's data type. For example, if a field's type is `time.Time`, [QOR Admin](../admin/README.md) will determine `datetime` as the type.
+[QOR Admin](../admin/README.md) автоматически выберет тип для `Meta` на основе типа данных поля. Например, если тип поля `time.Time`, [QOR Admin](../admin/README.md) он будет определен как `datetime` тип.
 
-Here's an example about make "Gender" of a user as a select element in the user form that includes three options "Male", "Female" and "Unknown".
+Например, для поля «Gender» качестве элемента выбора в форме пользователя, который включает в себя два варианта: "Male", "Female".
 
 ```go
-user.Meta(&admin.Meta{Name: "Gender", Config: &admin.SelectOneConfig{Collection: []string{"Male", "Female", "Unknown"}}})
+user.Meta(&admin.Meta{Name: "Gender", Config: &admin.SelectOneConfig{Collection: []string{"Male", "Female"}}})
 ```
 
-### Customize Meta
+### Настройка Meta
 
-If default configuration of a field doesn't match your needs, you would like to customize the field, here are possible options:
+Если конфигурация поля по умолчанию не соответствует вашим потребностям, вы хотите настроить поле:
 
 ```go
 type Meta struct {
@@ -101,11 +101,10 @@ type Meta struct {
 
 * Name
 
-  The name of the field's name that you would like to overwrite
-
+  Имя поля, которое требуется перезаписать.
+Например, перезапишем поле «Gender» качестве элемента выбора в форме пользователя, который включает в себя два варианта: "Male", "Female".
   ```go
-  // Overwrite field `Gender`, change it to select with three options from default input box
-  user.Meta(&admin.Meta{Name: "Gender", Config: &admin.SelectOneConfig{Collection: []string{"Male", "Female", "Unknown"}}})
+  user.Meta(&admin.Meta{Name: "Gender", Config: &admin.SelectOneConfig{Collection: []string{"Male", "Female"}}})
   ```
 
 * FieldName

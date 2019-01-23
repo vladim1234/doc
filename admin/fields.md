@@ -24,7 +24,7 @@ order.NewAttrs("User", "PaymentAmount", "ShippedAt", "CancelledAt", "State", "Sh
 ```go
 order.NewAttrs("-State")
 ```
-
+Поля на новой форме можно разбить на несколько разделов, например Basic Information и Organization:
 ```go
 // Structure the new form to make it tidy and clean with `Section`
 product.NewAttrs(

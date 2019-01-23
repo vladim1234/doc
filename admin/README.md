@@ -2,7 +2,7 @@
 
 QOR Admin - это фреймворк Golang, позволяющая вам мгновенно создать красивый кроссплатформенный настраиваемый интерфейс администратора для управления вашими данными за считанные минуты.
 
-При этом QOR Admin не является классическим Web фреймворком как [Chi](https://github.com/go-chi/chi), [Beego](https://github.com/astaxie/beego) or [Gin](https://github.com/gin-gonic/gin), and it [works with them](../admin/integration.md).
+При этом QOR Admin не является классическим Web фреймворком как [Chi](https://github.com/go-chi/chi), [Beego](https://github.com/astaxie/beego) or [Gin](https://github.com/gin-gonic/gin), но он может  [работать вместе с ними](../admin/integration.md).
 
 ### Возможности
 

@@ -120,13 +120,13 @@ type Meta struct {
 
 * Type
 
-  The display type of the attribute, e.g. `select_one`, `password`. [see full list of predefined meta types](#predefined-meta-types)
+  Тип отображения атрибута, например: `select_one`, `password`. [полный список предопределенных мета-типов](#common_meta_types)
 
 * Label
 
-  The label of the attribute in the form and the table title for the index page.
+ Название атрибута в форме и заголовок таблицы для страницы индекса.
 
-  The default label of "address" is "Address". You can set another label for "address" by this option.
+  По умолчанию в качестве названия «address» используется «Address». С помощью этой опции вы можете установить другое название для «address».
 
 * Setter
 

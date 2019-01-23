@@ -67,9 +67,9 @@ orderItemResource.EditAttrs("ProductCode", "Price", "Quantity")
 
 ## Meta
 
-By default, resource's fields are rendered based on its types and relations. The default should satisfy the usual cases, you can customize the rendering by overwriting the `Meta` definition.
+По умолчанию поля ресурса отображаются на основе его типов и отношений. при необходимости  вы можете настроить рендеринг, переписав meta определение.
 
-There are some `Meta` types that have been predefined, including `string`, `password`, `date`, `datetime`, `rich_editor`, `select_one`, `select_many` and so on ([see full list below](#predefined-meta-types)).
+Существует несколько предопределенных типов `Meta`, в том числе `string`, `password`, `date`, `datetime`, `rich_editor`, `select_one`, `select_many`, более подробно ([see full list below](#predefined-meta-types)).
 
 [QOR Admin](../admin/README.md) will auto select a type for `Meta` based on a field's data type. For example, if a field's type is `time.Time`, [QOR Admin](../admin/README.md) will determine `datetime` as the type.
 

@@ -55,7 +55,7 @@ order.ShowAttrs("User", "PaymentAmount", "ShippedAt", "CancelledAt", "State", "S
 ```
 Если ShowAttrs не были настроены, страница показа не будет сгенерирована, вместо нее будет показана форма редактирования.
 
-## Настройте поля для вложенных ресурсов
+## Настройка поля для вложенных ресурсов
 
 ```go
 order := Admin.AddResource(&models.Order{})

@@ -161,11 +161,11 @@ type Meta struct {
 
 * Permission
 
-  Define user authority of this attribute, Check [Authentication](/admin/authentication.md#authorization-for-fields) for detail.
+  Определяет настройку полномочий пользователя для этого атрибута, см. [Authentication](/admin/authentication.md#authorization-for-fields) for detail.
 
 * Config
 
-  The configuration of current type of attribute, e.g. `Config: &admin.SelectOneConfig{Collection: []string{"Male", "Female", "Unknown"}}`. Check each meta's document for detail.
+  Конфигурация текущего типа атрибута, например: `Config: &admin.SelectOneConfig{Collection: []string{"Male", "Female", "Unknown"}}`. 
 
 ### Virtual Field
 

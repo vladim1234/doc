@@ -1,12 +1,16 @@
 # Authentication
 
-QOR provides a authentication system [Auth](http://github.com/qor/auth), it is a modular authentication system for web development in Golang, it provides different authentication backends to accelerate your development.
+Auth - это модульная система аутентификации для веб-разработки в Golang, она предоставляет различные бэкэнды аутентификации для ускорения вашей разработки.
 
-Currently Auth has database password, github, google, facebook, twitter authentication support, and it is fairly easy to add other support based on [Auth's Provider interface](https://godoc.org/github.com/qor/auth#Provider)
+В настоящее время Auth имеет пароль базы данных, github, google, facebook, поддержку аутентификации в твиттере, и довольно легко добавить другую поддержку на основе интерфейса провайдера Auth.
+
+[Auth](http://github.com/qor/auth) - это модульная система аутентификации для веб-разработки в Golang, она предоставляет различные бэкэнды аутентификации для ускорения вашей разработки.
+
+В настоящее время Auth поддерживает авторизацию с использованием database password, github, google, facebook, twitter и довольно легко добавить другую поддержку на основе интерфейса провайдера on [Auth's Provider interface](https://godoc.org/github.com/qor/auth#Provider)
 
 ## Quick Start
 
-Auth aims to provide an easy to use authentication system that don't require much developer's effort.
+Auth стремится предоставить простую в использовании систему аутентификации, которая не требует больших усилий разработчика.
 
 To use it, basic flow is:
 
@@ -14,7 +18,7 @@ To use it, basic flow is:
 * Register some providers
 * Register it into router
 
-Here is an example:
+Например:
 
 ```go
 import (

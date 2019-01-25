@@ -144,7 +144,7 @@ type Meta struct {
   func(record interface{}, context *qor.Context) (result interface{})
   ```
 
-  `Valuer` defined how to fetch field's value from `object`, it returns a golang object as result, QOR usually will render field's template differently based on its value and state.
+  `Valuer` определяет, как извлекать значение поля из `object`, it returns a golang object as result, QOR usually will render field's template differently based on its value and state.
 
 * FormattedValuer
 
@@ -157,7 +157,7 @@ type Meta struct {
 
 * Resource
 
-  Это может быть использовано для настройки атрибутов во вложенной форме, обычно это не нужно устанавливать, проверьте подробнее, [как настроить атрибут во вложенной форме](../metas/collection-edit.md).
+  Это может быть использовано для настройки атрибутов во вложенной форме, обычно это не нужно устанавливать, подробнее: [как настроить атрибут во вложенной форме](../metas/collection-edit.md).
 
 * Permission
 

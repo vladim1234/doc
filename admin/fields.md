@@ -153,7 +153,8 @@ type Meta struct {
   func(record interface{}, context *qor.Context) (result interface{})
   ```
 
-  `FormattedValuer` is similar like `Valuer`, but it usually returns formatted string as result, it will be shown to end user in index page and API.
+`FormattedValuer` похож на `Valuer`, но обычно возвращает форматированную строку как результат, он будет показан конечному пользователю на странице индекса и API
+
 
 * Resource
 

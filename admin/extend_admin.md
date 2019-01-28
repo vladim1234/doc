@@ -6,13 +6,11 @@ QOR Admin стремится быть гибкой, легко расширяе�
 
 ### Extend QOR Resource
 
-Когда в QOR Admin добавляется структура, QOR Admin проверяет, реализован ли интерфейс этой структуры и встроенных структур.[ConfigureResourceBeforeInitializeInterface](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceBeforeInitializeInterface) or [ConfigureResourceInterface](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceInterface)
+Когда в QOR Admin добавляется структура, QOR Admin проверяет, реализован ли интерфейс этой структуры и встроенных структур [ConfigureResourceBeforeInitializeInterface](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceBeforeInitializeInterface) или [ConfigureResourceInterface](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceInterface)
 
-The [`ConfigureResourceBeforeInitializeInterface`](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceBeforeInitializeInterface) интерфейс будет вызван до инициализации ресурса.
+[`ConfigureResourceBeforeInitializeInterface`](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceBeforeInitializeInterface) - интерфейс будет вызван до инициализации ресурса.
 
-The [`ConfigureResourceInterface`](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceInterface) 
-59/5000
-Интерфейс будет вызван после инициализации ресурса.
+[`ConfigureResourceInterface`](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceInterface) - интерфейс будет вызван после инициализации ресурса.
 Тогда `AddResource`, рабочий процесс выглядит так:
 
 ```go

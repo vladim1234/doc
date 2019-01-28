@@ -38,21 +38,27 @@ user := Admin.AddResource(&User{})
 
 Администратор QOR генерирует обработчики CURD по умолчанию на основе API GORM. Если ваш ресурс не является бэкэнд-моделью GORM, вы можете написать собственный обработчик CRUD, например, сохранить его в Redis или на сервере кэширования, например:
 
+найти запись и расшифровать ее до результата:
 ```go
 res.FindOneHandler = func(result interface{}, metaValues *resource.MetaValues, context *qor.Context) error {
-  // find record and decode it to result
 }
-
+```
+найти записи и расшифровать ее до результата:
+```go
 res.FindManyHandler = func(results interface{}, context *qor.Context) error {
   // find records and decode them to results
 }
-
+```
+сохранить результат
+```go
 res.SaveHandler = func(result interface{}, context *qor.Context) error {
   // save result
 }
-
+```
+удалить результат
+```go
 res.DeleteHandler = func(result interface{}, context *qor.Context) error {
-  // delete result
+ 
 }
 ```
 

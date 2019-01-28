@@ -36,7 +36,7 @@ user := Admin.AddResource(&User{})
 
 ### Overwrite CURD Handler
 
-QOR Admin generates default CURD Handlers based on GORM's API, if your resource is not a GORM-backend model, you can consider to write your own CRUD handler, like save it into Redis or a cache server, like:
+Администратор QOR генерирует обработчики CURD по умолчанию на основе API GORM. Если ваш ресурс не является бэкэнд-моделью GORM, вы можете написать собственный обработчик CRUD, например, сохранить его в Redis или на сервере кэширования, например:
 
 ```go
 res.FindOneHandler = func(result interface{}, metaValues *resource.MetaValues, context *qor.Context) error {
@@ -56,7 +56,7 @@ res.DeleteHandler = func(result interface{}, context *qor.Context) error {
 }
 ```
 
-Checkout https://github.com/qor/qor/blob/master/resource/crud.go to get some hints from default implementations
+Провеьрте https://github.com/qor/qor/blob/master/resource/crud.go чтобы получить некоторые подсказки из реализаций по умолчанию
 
 Generate [nested RESTFul API](/admin/restful_api.md#nested-api) is using this feature.
 

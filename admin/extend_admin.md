@@ -1,18 +1,19 @@
 # Extend QOR Admin
 
-QOR Admin aims to be a flexible, easily extendable, and highly configurable admin framework that could fit most business requirements. In this chapter, we will learn how to extend the admin framework.
+QOR Admin стремится быть гибкой, легко расширяемой и легко настраиваемой средой администрирования, которая могла бы соответствовать большинству бизнес-требований. В этой главе мы узнаем, как расширить структуру администратора.
 
 ## Resource
 
 ### Extend QOR Resource
 
-When added a struct to QOR Admin, QOR Admin will check if this struct and its embedded structs implemented interface [ConfigureResourceBeforeInitializeInterface](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceBeforeInitializeInterface) or [ConfigureResourceInterface](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceInterface)
+Когда в QOR Admin добавляется структура, QOR Admin проверяет, реализован ли интерфейс этой структуры и встроенных структур.[ConfigureResourceBeforeInitializeInterface](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceBeforeInitializeInterface) or [ConfigureResourceInterface](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceInterface)
 
-The [`ConfigureResourceBeforeInitializeInterface`](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceBeforeInitializeInterface) interface will be invoked before initializing the resource.
+The [`ConfigureResourceBeforeInitializeInterface`](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceBeforeInitializeInterface) интерфейс будет вызван до инициализации ресурса.
 
-The [`ConfigureResourceInterface`](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceInterface) interface will be invoked after initializing the resource.
-
-So when `AddResource`, the workflow looks like:
+The [`ConfigureResourceInterface`](https://godoc.org/github.com/qor/qor/resource#ConfigureResourceInterface) 
+59/5000
+Интерфейс будет вызван после инициализации ресурса.
+Тогда `AddResource`, рабочий процесс выглядит так:
 
 ```go
 type User struct {
@@ -32,7 +33,8 @@ user := Admin.AddResource(&User{})
 // 3, run User.ConfigureQorResource(user)
 ```
 
-This is helpful when writing QOR Plugins, most plugins are written based on that, for example: [QOR L10n](https://github.com/qor/l10n), [QOR Publish2](https://github.com/qor/publish2)
+
+Это полезно при написании плагинов QOR, большинство плагинов написаны на основе этого, например: [QOR L10n](https://github.com/qor/l10n), [QOR Publish2](https://github.com/qor/publish2)
 
 ### Overwrite CURD Handler
 

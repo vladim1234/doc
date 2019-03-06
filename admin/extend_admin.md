@@ -84,20 +84,20 @@ res.OverrideEditAttrs(func() {
 
 ### Reconfigure Meta
 
-QOR Admin will combine your Meta configurations, the latest configuration will overwrite previous one.
+QOR Admin объединит ваши мета-конфигурации, последняя из них заменит предыдущую.
 
 ```go
 user.Meta(&admin.Meta{Name: "Gender", Label: "Select Gender", Config: &admin.SelectOneConfig{Collection: []string{"Male", "Female", "Unknown"}}})
 user.Meta(&admin.Meta{Name: "Gender", Config: &admin.SelectOneConfig{Collection: []string{"Male", "Female"}}})
 
-// becomes
+// станет
 
 user.Meta(&admin.Meta{Name: "Gender", Label: "Select Gender", Config: &admin.SelectOneConfig{Collection: []string{"Male", "Female"}}})
 ```
 
 ### Register Meta Processor
 
-Meta Processor will be call each time reconfigure a `Meta`
+Метапроцессор вызываться каждый раз при перенастройке `Meta`
 
 ```go
 genderMeta := user.Meta(&admin.Meta{Name: "Gender", Label: "Select Gender", Config: &admin.SelectOneConfig{Collection: []string{"Male", "Female"}}})

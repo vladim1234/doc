@@ -144,8 +144,7 @@ type Meta struct {
   func(record interface{}, context *qor.Context) (result interface{})
   ```
 
-  `Valuer` определяет, как извлекать значение поля из `object`, it returns a golang object as result, QOR usually will render field's template differently based on its value and state.
-
+  `Valuer` определяет, как извлекать значение поля из `object`, в результате он возвращает объект golang, QOR обычно отображает шаблон поля по-разному в зависимости от его значения и состояния.
 * FormattedValuer
 
   ```go
@@ -170,7 +169,7 @@ type Meta struct {
 
 ### Virtual Field
 
-You can configure QOR Admin to display "virtual" fields - fields that are not database attributes. Just define them as `Meta` to your resource, to define it for a virtual field, `Valuer` is must be required (refer [Customize Meta](#customize-meta)), so QOR Admin knows how to display it to end user.
+Вы можете настроить QOR Admin для отображения «виртуальных» полей - полей, которые не являются атрибутами базы данных. Just define them as `Meta` to your resource, to define it for a virtual field, `Valuer` is must be required (refer [Customize Meta](#customize-meta)), so QOR Admin knows how to display it to end user.
 
 ```go
 product.Meta(&admin.Meta{Name: "MainImageURL", Valuer: func(record interface{}, context *qor.Context) interface{} {

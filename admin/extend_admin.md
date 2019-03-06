@@ -64,13 +64,14 @@ res.DeleteHandler = func(result interface{}, context *qor.Context) error {
 
 Провеьрте https://github.com/qor/qor/blob/master/resource/crud.go чтобы получить некоторые подсказки из реализаций по умолчанию
 
-Generate [nested RESTFul API](/admin/restful_api.md#nested-api) is using this feature.
+При генерации встроенного [RESTFul API](/admin/restful_api.md#nested-api) эта функция так-же используется.
+
 
 ### Attributes
 
-[As you know](/admin/fields.md#customize-visible-fields), you could set index/show/edit/new page's attributes with `IndexAttrs`, `NewAttrs`, `EditAttrs`, `ShowAttrs`.
+[как вы знаете](/admin/fields.md#customize-visible-fields), можно установить атрибуты index/show/edit/new  с помощью `IndexAttrs`, `NewAttrs`, `EditAttrs`, `ShowAttrs`.
 
-When you writing plugins, you might have requirements that always show or hide some attributes, `OverrideIndexAttrs`, `OverrideNewAttrs`, `OverrideEditAttrs`, `OverrideShowAttrs` are for the job, you could write it like:
+При написании плагинов может возникнуть необходимость всегда показывать или закрывать некоторые атрибуты, это можно сделать с помощью  `OverrideIndexAttrs`, `OverrideNewAttrs`, `OverrideEditAttrs`, `OverrideShowAttrs`, например :
 
 ```go
 // Each time you configured EditAttrs for the resource, we will append field `PublisReady` and remove `State` from edit attrs.

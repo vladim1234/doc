@@ -108,10 +108,11 @@ type Meta struct {
   ```
 
 * FieldName
+Отображение для имени атрибута в ресурсе. Обычно это не устанавливается, и оно по умолчанию совпадает с `Name`.
 
-  Mapping to the attribute name in the resource, Usually, This is no need to set and same with `Name` by default.
+Обычно это требуется, когда вы хотите использовать QOR Admin в качестве [RESTFul API Service](../admin/restful_api.md) и выставлять поля с другим именем, например:
 
-  This is usually needed when you want to use QOR Admin as [RESTFul API Service](../admin/restful_api.md) and expose fields with a different name, e.g:
+
 
   ```go
   // Generate JSON { "Code": "value-of-ExternalCode", ... }

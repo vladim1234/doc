@@ -169,7 +169,8 @@ type Meta struct {
 
 ### Virtual Field
 
-Вы можете настроить QOR Admin для отображения «виртуальных» полей - полей, которые не являются атрибутами базы данных. Just define them as `Meta` to your resource, to define it for a virtual field, `Valuer` is must be required (refer [Customize Meta](#customize-meta)), so QOR Admin knows how to display it to end user.
+Вы можете настроить QOR Admin для отображения «виртуальных» полей - полей, которые не являются атрибутами базы данных. 
+Определите их как Meta для вашего ресурса, чтобы определить его для виртуального поля, при этом Valuer должен быть определен  (см. [Настройка Meta](#customize-meta)), поэтому администратор QOR знает, как отобразить его для конечного пользователя.
 
 ```go
 product.Meta(&admin.Meta{Name: "MainImageURL", Valuer: func(record interface{}, context *qor.Context) interface{} {
@@ -180,15 +181,15 @@ product.Meta(&admin.Meta{Name: "MainImageURL", Valuer: func(record interface{}, 
 }})
 ```
 
-If you want to use the virtual field in `NewAttrs`, `EditAttrs`, `ShowAttrs`, you have to:
+Если вы хотите использовать виртуальное поле в `NewAttrs`,` EditAttrs`, `ShowAttrs`, вам необходимо:
 
-* Define meta's `Type`
+* Определить meta `Type`
 
-  Then QOR Admin knows which template to use when rendering it
+  Тогда QOR Admin знает, какой шаблон использовать при рендеринге.
 
-* Define meta's `Setter`
+* определить мата `Setter`
 
-  Then QOR Admin knows how to save form's value
+  Тогда QOR Admin знает, как сохранить значение формы
 
 e.g:
 
